@@ -11,10 +11,6 @@ class Banner extends Model
     protected $fillable = [
         'title',
         'tag_line',
-        'link_1',
-        'link_name_1',
-        'link_2',
-        'link_name_2',
     ];
 
     protected $hidden = [
@@ -23,9 +19,5 @@ class Banner extends Model
     protected $casts = [
         'title' => 'string',
         'tag_line' => 'string',
-        'link_1' => 'string',
-        'link_name_1' => 'string',
-        'link_2' => 'string',
-        'link_name_2' => 'string',
     ];
 }

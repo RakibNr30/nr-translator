@@ -19,12 +19,8 @@
                                         {{ $banner->tag_line ?? '' }}
                                     </p>
                                     <div class="group-md button-group">
-                                        @if(isset($banner->link_1) && isset($banner->link_name_1))
-                                            <a class="button button-secondary button-nina button-lg" href="{{ $banner->link_1 }}" data-custom-scroll-to="#start" data-caption-animate="fxRotateInDown" data-caption-delay="550">{{ $banner->link_name_1 }}</a>
-                                        @endif
-                                        @if(isset($banner->link_2) && isset($banner->link_2))
-                                            <a class="button button-default-outline button-nina button-lg" href="{{ $banner->link_2 }}" data-caption-animate="fxRotateInDown" data-caption-delay="550">{{ $banner->link_name_2 }}</a>
-                                        @endif
+                                        <a class="button button-secondary button-nina button-lg" href="" data-custom-scroll-to="#start" data-caption-animate="fxRotateInDown" data-caption-delay="550">{!! 'Start A Journey' !!}</a>
+                                        <a class="button button-default-outline button-nina button-lg" href="{{ route('front.plan.index') }}" data-caption-animate="fxRotateInDown" data-caption-delay="550">{!! 'View Our Plan' !!}</a>
                                     </div>
                                 </div>
                             </div>

@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
 
     <!-- include summernote css -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     @yield('style')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed text-sm" onload="display_current_time()">

@@ -17,10 +17,6 @@ class CreateBannersTable extends Migration
             $table->bigIncrements('id');
             $table->string('title')->nullable();
             $table->string('tag_line')->nullable();
-            $table->string('link_1')->nullable();
-            $table->string('link_name_1')->nullable();
-            $table->string('link_2')->nullable();
-            $table->string('link_name_2')->nullable();
             $table->commonFields();
         });
     }

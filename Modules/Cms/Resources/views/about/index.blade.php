@@ -11,7 +11,7 @@
                         <div class="card-header">
                             <h3 class="card-title mt-1">Update About Us Info</h3>
                         </div>
-                        {!! Form::open(['url' => url('admin/about', [$about->id]), 'method' => 'put']) !!}
+                        {!! Form::open(['url' => url('admin/about-us', [$about->id]), 'method' => 'put']) !!}
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">

@@ -9,7 +9,6 @@
 
     <meta name="keywords" content="{{ $global_seo->meta_tags ?? '' }}">
     <meta name="description" content="{{ $global_seo->meta_description ?? '' }}">
-
     <link rel="icon" href="{{ $global_site->favicon->file_url ?? config('core.image.default.favicon') }}">
     <link rel="stylesheet" href="{{ asset('/front/css/core.css') }}">
     <link rel="stylesheet" href="{{ asset('/front/css/style.css') }}">
