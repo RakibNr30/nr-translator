@@ -6,7 +6,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        float: left;
+        /float: left;
     }
 </style>
 <nav class="main-header navbar navbar-expand navbar-dark navbar-danger">
