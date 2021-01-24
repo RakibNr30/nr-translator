@@ -27,8 +27,13 @@
                                     <div class="form-group">
                                         <label for="logo" class="@error('logo') text-danger @enderror">Site Logo</label>
                                         <input id="logo" name="logo" value="{{ old('logo') }}" type="file" class="form-control @error('logo') is-invalid @enderror" placeholder="Select File" autofocus>
-                                        @if(isset($site->logo->file_name))
+                                        {{--@if(isset($site->logo->file_name))
                                             <span class="invalid-feedback text-dark" role="alert"><strong>logo: {{ $site->logo->file_name }}</strong></span>
+                                        @endif--}}
+                                        @if(isset($site->logo))
+                                            <div class="image-output">
+                                                <img src="{{ $site->logo->file_url }}">
+                                            </div>
                                         @endif
                                         @error('logo')
                                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
@@ -39,8 +44,13 @@
                                     <div class="form-group">
                                         <label for="favicon" class="@error('favicon') text-danger @enderror">Site Favicon</label>
                                         <input id="favicon" name="favicon" value="{{ old('favicon') }}" type="file" class="form-control @error('favicon') is-invalid @enderror" placeholder="Select File" autofocus>
-                                        @if(isset($site->favicon->file_name))
+                                        {{--@if(isset($site->favicon->file_name))
                                             <span class="invalid-feedback text-dark" role="alert"><strong>favicon: {{ $site->favicon->file_name }}</strong></span>
+                                        @endif--}}
+                                        @if(isset($site->favicon))
+                                            <div class="image-output">
+                                                <img src="{{ $site->favicon->file_url }}">
+                                            </div>
                                         @endif
                                         @error('favicon')
                                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>

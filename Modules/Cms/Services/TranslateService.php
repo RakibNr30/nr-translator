@@ -20,9 +20,26 @@ class TranslateService
         return $this->translateRepository->findBy('slug', $slug);
     }
 
-    public function translateList()
+    public function translateList($slug)
     {
-        return $this->translateRepository->all();
+        $object = $this->translateRepository->findBy('slug', $slug);
+
+        if ($object) {
+            $low = $object->id;
+            if ($low>1) {
+                $low = $object->id - 1;
+            }
+            $high = $low + 2;
+
+            $data = $this->translateRepository->all()->whereBetween('id', [$low, $high]);
+            foreach ($data as $datum) {
+                if ($datum->slug == $slug) {
+                    $datum['active'] = 'active';
+                }
+            }
+            return $data;
+        }
+        return $this->translateRepository->all()->whereBetween('id', [1, 3]);
     }
 
     public function Translate($from, $to, $text)

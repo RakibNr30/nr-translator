@@ -18,7 +18,7 @@ class TranslateController extends Controller
     public function index($slug)
     {
         $translate = $this->translateService->translateData($slug);
-        $translateList = $this->translateService->translateList();
+        $translateList = $this->translateService->translateList($slug);
         if (!$translate) {
             abort(404);
         }

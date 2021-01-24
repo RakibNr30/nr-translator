@@ -350,11 +350,13 @@ function setTranslatedLang(t) {
 }
 pathnameContainsLanguageCode && "en" !== pathnameContainsLanguageCode && (STATUS.source.lang = pathname, STATUS.translated.lang = "en"), console.log(JSON.parse(JSON.stringify(language_mapping))), "undefined" != typeof LANG_PAIR && (console.log("LANG_PAIR", LANG_PAIR), STATUS.source.lang = LANG_PAIR.source_code, STATUS.translated.lang = LANG_PAIR.translation_code), $(document).ready(function() {
 	["source_language", "target_language"].map(function(t) {
+		/*
 		DOM[t].click(function() {
 			["source_language", "target_language"].map(function(t) {
 				closeLanguageList(t)
 			}), (null == $(this).attr("data-status") || "" == $(this).attr("data-status") ? openLanguageList : closeLanguageList)(t)
 		})
+		 */
 	}), $(document).mouseup(function(t) {
 		var e = "source_language" == $(t.target).attr("data-element") || "target_language" == $(t.target).attr("data-element");
 		DOM.target_language_list.is(t.target) || DOM.source_language_list.is(t.target) || 0 !== DOM.source_language_list.has(t.target).length || 0 !== DOM.target_language_list.has(t.target).length || e || (closeLanguageList("source_language"), closeLanguageList("target_language"))

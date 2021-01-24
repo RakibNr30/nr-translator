@@ -49,8 +49,13 @@
                                     <div class="form-group">
                                         <label for="avatar" class="@error('avatar') text-danger @enderror">Avatar</label>
                                         <input id="avatar" name="avatar" value="{{ old('avatar') }}" type="file" class="form-control @error('avatar') is-invalid @enderror" placeholder="Select File" autofocus>
-                                        @if(isset($user->avatar->file_name))
+                                        {{--@if(isset($user->avatar->file_name))
                                             <span class="invalid-feedback text-dark" role="alert"><strong>avatar: {{ $user->avatar->file_name }}</strong></span>
+                                        @endif--}}
+                                        @if(isset($user->avatar))
+                                            <div class="image-output">
+                                                <img src="{{ $user->avatar->file_url }}">
+                                            </div>
                                         @endif
                                         @error('avatar')
                                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>

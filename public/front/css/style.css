@@ -24,9 +24,21 @@ ul.social-icons-list li a {
 }
 
 .translate-menu-area {
-    padding: 0 20px;
+    padding: 0 18px;
 }
-@media (max-width: 1350px) {
+.translate-menu-area ul.nav li {
+    margin: 2px;
+}
+.translate-menu-area ul.nav li a {
+    background-color: rgba(39, 39, 39, 0.95);
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+@media (max-width: 1350px) and (min-width: 991px){
+    .translate-menu-area {
+        padding-left: 0;
+    }
+}
+@media (max-width: 991px){
     .translate-menu-area {
         padding: 0;
     }

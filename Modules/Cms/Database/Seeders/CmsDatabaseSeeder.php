@@ -20,7 +20,7 @@ class CmsDatabaseSeeder extends Seeder
 
         // $this->call("OthersTableSeeder");
 
-        $languageData = json_decode(File::get(resource_path('seed/cms/translate.json')));
+        $languageData = json_decode(File::get(resource_path('seed/cms/languages.json')));
 
         $total = count($languageData);
         for ($i = 0; $i < $total; $i++) {

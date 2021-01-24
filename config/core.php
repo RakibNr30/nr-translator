@@ -152,7 +152,7 @@ return [
     ],
     'image' => [
         'default' => [
-            'logo' => '/front/images/default/logo.png',
+            'logo' => '/front/images/default/logo.svg',
             'favicon' => '/front/images/default/favicon.svg',
         ]
     ]

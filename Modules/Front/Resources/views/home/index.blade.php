@@ -44,17 +44,22 @@
             const user_id = false;
         </script>
         <main>
-            <div class="container">
-                <div class="translate-menu-area">
-                    <ul class="nav nav-tabs">
-                        @foreach($translateList as $index => $list)
-                            <li>
-                                <a class="nav-link active" href="{{ route('front.translate.index', ['slug' => $list->slug]) }}">{{ $list->title }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
+            @if(isset($translateList))
+                <div class="container">
+                    <div class="translate-menu-area" style="margin-top: 40px">
+                        <ul class="nav nav-pills nav-fill">
+                            @foreach($translateList as $index => $list)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('front.translate.index', ['slug' => $list->slug]) }}">{{ $list->title }}</a>
+                                </li>
+                            @endforeach
+                            {{--<li>
+                                <a class="nav-link" href="javascript:void(0)">---</a>
+                            </li>--}}
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            @endif
             <div class="container" style="margin-top: 20px">
                 <div class="machineTranslationOuter">
                     <div class="machineTranslation">
@@ -68,14 +73,14 @@
                                     <div class="translator__language" data-language="source">
                                         <div class="translator__language__variants" data-element="source_language_list" style="display: none">
                                             <span class="translator__language__variants__close" data-element="close_language_list" data-target="source_language"></span>
-                                            {{--<div class="translator__language__variants__header">
+                                            <div class="translator__language__variants__header">
                                                 Select source language </div>
                                             <div class="translator__language__variants__list" data-element="source_lang">
                                                 <ul></ul>
-                                            </div>--}}
+                                            </div>
                                         </div>
                                         <div class="translator__language__selector-">
-                                            <span data-element="source_language">
+                                            <span data-element="source_language" id="source_language_list">
                                             </span>
                                         </div>
                                     </div>
@@ -91,11 +96,11 @@
                                     <div class="translator__language" data-language="target">
                                         <div class="translator__language__variants" data-element="target_language_list" style="display: none">
                                             <span class="translator__language__variants__close" data-element="close_language_list" data-target="target_language"></span>
-                                            {{--<div class="translator__language__variants__header">
+                                            <div class="translator__language__variants__header">
                                                 Select target language </div>
                                             <div class="translator__language__variants__list" data-element="translated_lang">
                                                 <ul></ul>
-                                            </div>--}}
+                                            </div>
                                         </div>
                                         <div class="translator__language__selector-">
                                             <span data-element="target_language">

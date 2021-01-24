@@ -25,8 +25,8 @@ class SiteStoreRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'logo' => 'required|image|max:2048',
-            'favicon' => 'required|image|max:1024',
+            'logo' => 'sometimes|image|max:2048',
+            'favicon' => 'sometimes|image|max:1024',
         ];
     }
 }

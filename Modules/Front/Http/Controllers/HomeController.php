@@ -18,7 +18,7 @@ class HomeController extends Controller
     }
     public function index()
     {
-        $translateList = $this->translateService->translateList();
+        $translateList = $this->translateService->translateList('english-to-bengali');
         $banner = $this->bannerService->first();
         return view('front::home.index', compact('banner', 'translateList'));
     }

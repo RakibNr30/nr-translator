@@ -28,7 +28,7 @@
                         </button>
                         <div class="rd-navbar-brand">
                             <a class="brand-name" href="{{ route('front.home.index') }}">
-                                <img class="" src="{{ $global_site->logo->file_url ?? config('core.image.default.logo') }}" alt="" style="width: 161px; height: 55px"/>
+                                <img class="" src="{{ $global_site->logo->file_url ?? config('core.image.default.logo') }}" alt="" style="height: 55px"/>
                             </a>
                         </div>
                     </div>
