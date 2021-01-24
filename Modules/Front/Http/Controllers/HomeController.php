@@ -4,27 +4,22 @@ namespace Modules\Front\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Modules\Cms\Services\BannerService;
+use Modules\Cms\Services\TranslateService;
 
 class HomeController extends Controller
 {
-    /**
-     * @var $bannerService
-     */
-    protected $bannerService;
+    private $bannerService;
+    private $translateService;
 
-    /**
-     * Constructor
-     *
-     * @param BannerService $bannerService
-     */
-
-    public function __construct(BannerService $bannerService)
+    public function __construct(BannerService $bannerService, TranslateService $translateService)
     {
         $this->bannerService = $bannerService;
+        $this->translateService = $translateService;
     }
     public function index()
     {
+        $translateList = $this->translateService->translateList();
         $banner = $this->bannerService->first();
-        return view('front::home.index', compact('banner'));
+        return view('front::home.index', compact('banner', 'translateList'));
     }
 }

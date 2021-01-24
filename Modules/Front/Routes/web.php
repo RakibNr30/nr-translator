@@ -15,5 +15,6 @@ Route::get('/', 'HomeController@index')->name('home.index');
 Route::get('/about-us', 'AboutController@index')->name('about.index');
 Route::get('/contact-us', 'ContactController@index')->name('contact.index');
 Route::get('/our-plan', 'PlanController@index')->name('plan.index');
-Route::post('/translate', 'TranslatorController@translate');
-Route::get('/translate', 'TranslatorController@not_found');
+Route::get('/translate/{slug}', 'TranslateController@index')->name('translate.index');
+Route::post('/translate', 'TranslateController@translate');
+Route::get('/translate', 'TranslateController@not_found');

@@ -1,33 +1,17 @@
 @extends('front.layouts.master')
 
-@section('title', 'Home')
-@section('active_status_home', 'active')
+@section('title')
+    Translate | {{ $translate->title }}
+@stop
 
 @section('breadcrumb')
-    <section class="breadcrumbs-custom-svg text-center">
-        <div class="swiper-container swiper-slider swiper-slider_height-1 swiper-main" data-loop="false" data-autoplay="5500" data-simulate-touch="false" data-slide-effect="fade">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" data-slide-bg="">
-                    <div class="swiper-slide-caption">
-                        <div class="container-wide swiper-main-section">
-                            <div class="row justify-content-sm-center">
-                                <div class="col-md-10 col-xl-10">
-                                    <p class="heading-1 breadcrumbs-custom-title" data-caption-animate="blurIn" data-caption-delay="50">
-                                        {{ $banner->title ?? 'Site Title Here' }}
-                                    </p>
-                                    <p class="heading-2" data-caption-animate="fxRotateInDown" data-caption-delay="550">
-                                        {{ $banner->tag_line ?? '' }}
-                                    </p>
-                                    <div class="group-md button-group">
-                                        <a class="button button-secondary button-nina button-lg" href="" data-custom-scroll-to="#start" data-caption-animate="fxRotateInDown" data-caption-delay="550">{!! 'Start A Journey' !!}</a>
-                                        <a class="button button-default-outline button-nina button-lg" href="{{ route('front.plan.index') }}" data-caption-animate="fxRotateInDown" data-caption-delay="550">{!! 'View Our Plan' !!}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="breadcrumbs-custom breadcrumbs-custom-svg">
+        <div class="container">
+            <p class="breadcrumbs-custom-subtitle">{{ $translate->title }}</p>
+            <ul class="breadcrumbs-custom-path" style="margin-top: 10px">
+                <li><a href="{{ route('front.home.index') }}">Home</a></li>
+                <li class="active">{{'Translate'}}</li>
+            </ul>
         </div>
     </section>
 @stop
@@ -55,7 +39,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="container" style="margin-top: 20px">
+            <div class="container" style="margin-top: 10px">
                 <div class="machineTranslationOuter">
                     <div class="machineTranslation">
                         <div class="machineTranslationBlock">
@@ -66,14 +50,6 @@
                                         <div class="loader__inner"></div>
                                     </div>
                                     <div class="translator__language" data-language="source">
-                                        <div class="translator__language__variants" data-element="source_language_list" style="display: none">
-                                            <span class="translator__language__variants__close" data-element="close_language_list" data-target="source_language"></span>
-                                            {{--<div class="translator__language__variants__header">
-                                                Select source language </div>
-                                            <div class="translator__language__variants__list" data-element="source_lang">
-                                                <ul></ul>
-                                            </div>--}}
-                                        </div>
                                         <div class="translator__language__selector-">
                                             <span data-element="source_language">
                                             </span>
@@ -91,11 +67,6 @@
                                     <div class="translator__language" data-language="target">
                                         <div class="translator__language__variants" data-element="target_language_list" style="display: none">
                                             <span class="translator__language__variants__close" data-element="close_language_list" data-target="target_language"></span>
-                                            {{--<div class="translator__language__variants__header">
-                                                Select target language </div>
-                                            <div class="translator__language__variants__list" data-element="translated_lang">
-                                                <ul></ul>
-                                            </div>--}}
                                         </div>
                                         <div class="translator__language__selector-">
                                             <span data-element="target_language">
@@ -103,28 +74,11 @@
                                         </div>
                                     </div>
                                     <textarea class="translator__field" id="translated_text" data-element="translated_text" readonly></textarea>
-                                    {{--
-                                    <ul class="translator__features">
-                                        <li class="icon icon__copy" data-action="copy" data-after-copy-text="Copied" data-clipboard-target="#translated_text">
-                                        </li>
-                                        <li class="icon icon__share" data-action="share_link">
-                                        </li>
-                                    </ul>
-                                    <div class="translator__features  translator__features--play">
-                                        <div class="icon icon__audio icon__play" data-element="play_audio">
-                                            play
-                                        </div>
-                                        <div class="icon icon__audio icon__stop hidden" data-element="stop_audio">
-                                            stop
-                                        </div>
-                                    </div>
-                                    --}}
                                     <ul class="translator__features">
                                         <li class="icon icon__copy" data-action="copy" data-after-copy-text="Copied" data-clipboard-target="#translated_text">
                                         </li>
                                     </ul>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -141,4 +95,14 @@
 @section('script')
     <script src="{{ asset('/front/js/languages.js') }}"></script>
     <script src="{{ asset('/front/js/translate_request.js') }}"></script>
+    <script>
+        STATUS.source.lang = '{{ $translate->from_lang_code }}';
+        STATUS.translated.lang = '{{ $translate->to_lang_code }}';
+
+        {{--DOM.reverse.on("click", function() {
+            console.log("aaaaa");
+            STATUS.source.lang = '{{ $translate->to_lang_code }}';
+            STATUS.translated.lang = '{{ $translate->from_lang_code }}';
+        });--}}
+    </script>
 @stop

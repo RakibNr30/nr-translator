@@ -117,9 +117,9 @@
                     <div class="quick-link">
                         <h6>Quick links</h6>
                         <ul class="list-marked list-marked-primary">
-                            <li><a href="{{ route('front.home.index') }}">Home</a></li>
                             <li><a href="{{ route('front.about.index') }}">About Us</a></li>
                             <li><a href="{{ route('front.contact.index') }}">Contact Us</a></li>
+                            <li><a href="{{ route('front.plan.index') }}">Our Plan</a></li>
                         </ul>
                     </div>
                 </div>

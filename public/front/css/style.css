@@ -22,3 +22,12 @@
 ul.social-icons-list li a {
     padding: 8px;
 }
+
+.translate-menu-area {
+    padding: 0 20px;
+}
+@media (max-width: 1350px) {
+    .translate-menu-area {
+        padding: 0;
+    }
+}

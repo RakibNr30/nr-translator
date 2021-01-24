@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "lang": "English",
+    "code": "en"
+  },
+  {
+    "id": 2,
+    "lang": "Bengali",
+    "code": "bn"
+  },
+  {
+    "id": 3,
+    "lang": "Arabic",
+    "code": "ar"
+  },
+  {
+    "id": 4,
+    "lang": "Hindi",
+    "code": "hi"
+  },
+  {
+    "id": 5,
+    "lang": "Amharic",
+    "code": "am"
+  },
+  {
+    "id": 6,
+    "lang": "Chinese Simplified",
+    "code": "ch-zn"
+  },
+  {
+    "id": 7,
+    "lang": "Filipino",
+    "code": "tl"
+  },
+  {
+    "id": 8,
+    "lang": "German",
+    "code": "de"
+  },
+  {
+    "id": 9,
+    "lang": "Greek",
+    "code": "el"
+  },
+  {
+    "id": 10,
+    "lang": "Gujarati",
+    "code": "gu"
+  },
+  {
+    "id": 11,
+    "lang": "Indonesian",
+    "code": "id"
+  },
+  {
+    "id": 12,
+    "lang": "Italian",
+    "code": "it"
+  },
+  {
+    "id": 13,
+    "lang": "Japanese",
+    "code": "ja"
+  },
+  {
+    "id": 14,
+    "lang": "Kannada",
+    "code": "kn"
+  },
+  {
+    "id": 15,
+    "lang": "Khmer",
+    "code": "km"
+  },
+  {
+    "id": 16,
+    "lang": "Korean",
+    "code": "ko"
+  },
+  {
+    "id": 17,
+    "lang": "Lao",
+    "code": "lo"
+  },
+  {
+    "id": 18,
+    "lang": "Malay",
+    "code": "ms"
+  },
+  {
+    "id": 19,
+    "lang": "Malayalam",
+    "code": "ml"
+  },
+  {
+    "id": 20,
+    "lang": "Marathi",
+    "code": "mr"
+  },
+  {
+    "id": 21,
+    "lang": "Myanmar (Burmese)",
+    "code": "my"
+  },
+  {
+    "id": 22,
+    "lang": "Nepali",
+    "code": "ne"
+  },
+  {
+    "id": 23,
+    "lang": "Odia (Oriya)",
+    "code": "or"
+  },
+  {
+    "id": 24,
+    "lang": "Pashto",
+    "code": "ps"
+  },
+  {
+    "id": 25,
+    "lang": "Persian",
+    "code": "fa"
+  },
+  {
+    "id": 26,
+    "lang": "Portuguese",
+    "code": "pt"
+  },
+  {
+    "id": 27,
+    "lang": "Punjabi",
+    "code": "ma"
+  },
+  {
+    "id": 28,
+    "lang": "Sinhala",
+    "code": "si"
+  },
+  {
+    "id": 29,
+    "lang": "Spanish",
+    "code": "es"
+  },
+  {
+    "id": 30,
+    "lang": "Tamil",
+    "code": "ta"
+  },
+  {
+    "id": 31,
+    "lang": "Telugu",
+    "code": "te"
+  },
+  {
+    "id": 32,
+    "lang": "Thai",
+    "code": "th"
+  },
+  {
+    "id": 33,
+    "lang": "Urdu",
+    "code": "ur"
+  },
+  {
+    "id": 34,
+    "lang": "Vietnamese",
+    "code": "vi"
+  }
+]
