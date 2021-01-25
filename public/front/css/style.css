@@ -32,14 +32,24 @@ ul.social-icons-list li a {
 .translate-menu-area ul.nav li a {
     background-color: rgba(39, 39, 39, 0.95);
     border-color: #dee2e6 #dee2e6 #fff;
+    color: #fff;
+}
+.translate-menu-area ul.nav li a:hover {
+    color: #ed1c94;
+}
+.translate-menu-area ul.nav li a.active:hover {
+    color: #fff;
 }
 @media (max-width: 1350px) and (min-width: 991px){
     .translate-menu-area {
         padding-left: 0;
     }
 }
-@media (max-width: 991px){
+@media (max-width: 992px){
     .translate-menu-area {
         padding: 0;
+    }
+    .rd-navbar-brand img {
+        height: 35px !important;
     }
 }

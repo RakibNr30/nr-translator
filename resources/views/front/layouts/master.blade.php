@@ -28,7 +28,7 @@
                         </button>
                         <div class="rd-navbar-brand">
                             <a class="brand-name" href="{{ route('front.home.index') }}">
-                                <img class="" src="{{ $global_site->logo->file_url ?? config('core.image.default.logo') }}" alt="" style="height: 55px"/>
+                                <img class="" src="{{ $global_site->logo->file_url ?? config('core.image.default.logo') }}" alt="" style="height: 50px"/>
                             </a>
                         </div>
                     </div>
@@ -38,6 +38,9 @@
                                 <li class="rd-nav-item @yield('active_status_home')">
                                     <a class="rd-nav-link" href="{{ route('front.home.index') }}">Home</a>
                                 </li>
+                                <li class="rd-nav-item @yield('active_status_plan')">
+                                    <a class="rd-nav-link" href="{{ route('front.plan.index') }}">Our Plan</a>
+                                </li>
                                 <li class="rd-nav-item @yield('active_status_about')">
                                     <a class="rd-nav-link" href="{{ route('front.about.index') }}">About Us</a>
                                 </li>
@@ -46,15 +49,6 @@
                                 </li>
                             </ul>
                         </div>
-                        {{--
-                        <div class="rd-navbar-aside-right-inner">
-                            <div class="rd-navbar-search">
-                                <a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#">
-                                    <span></span>
-                                </a>
-                            </div>
-                        </div>
-                        --}}
                     </div>
                 </div>
             </nav>

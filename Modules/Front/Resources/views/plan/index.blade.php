@@ -1,6 +1,7 @@
 @extends('front.layouts.master')
 
 @section('title', 'Our Plan')
+@section('active_status_plan', 'active')
 
 @section('breadcrumb')
     <section class="breadcrumbs-custom breadcrumbs-custom-svg">

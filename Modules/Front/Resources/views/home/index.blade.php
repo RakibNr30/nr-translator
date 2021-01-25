@@ -20,7 +20,7 @@
                                     </p>
                                     <div class="group-md button-group">
                                         <a class="button button-secondary button-nina button-lg" href="" data-custom-scroll-to="#start" data-caption-animate="fxRotateInDown" data-caption-delay="550">{!! 'Start A Journey' !!}</a>
-                                        <a class="button button-default-outline button-nina button-lg" href="{{ route('front.plan.index') }}" data-caption-animate="fxRotateInDown" data-caption-delay="550">{!! 'View Our Plan' !!}</a>
+                                        <a class="button button-default-outline button-nina button-lg" href="{{ route('front.translate-more.index') }}" data-caption-animate="fxRotateInDown" data-caption-delay="550">{!! 'Translate More' !!}</a>
                                     </div>
                                 </div>
                             </div>

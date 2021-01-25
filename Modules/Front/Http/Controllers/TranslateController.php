@@ -25,6 +25,12 @@ class TranslateController extends Controller
         return view('front::translate.index', compact('translate', 'translateList'));
     }
 
+    public function translateMore()
+    {
+        $translateList = $this->translateService->translateMoreList(66);
+        return view('front::translate-more.index', compact( 'translateList'));
+    }
+
     public function translate(Request $request)
     {
         $data = $request->all()['n'];

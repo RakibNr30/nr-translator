@@ -42,6 +42,11 @@ class TranslateService
         return $this->translateRepository->all()->whereBetween('id', [1, 3]);
     }
 
+    public function translateMoreList($limit = 0)
+    {
+        return $this->translateRepository->paginate($limit);
+    }
+
     public function Translate($from, $to, $text)
     {
         $tr = new GoogleTranslate();
