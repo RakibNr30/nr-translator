@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 <head>
-    <title>{{ $global_site->name ?? 'Site Title' }} | @yield('title')</title>
+    <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -38,14 +38,17 @@
                                 <li class="rd-nav-item @yield('active_status_home')">
                                     <a class="rd-nav-link" href="{{ route('front.home.index') }}">Home</a>
                                 </li>
-                                <li class="rd-nav-item @yield('active_status_plan')">
-                                    <a class="rd-nav-link" href="{{ route('front.plan.index') }}">Our Plan</a>
-                                </li>
                                 <li class="rd-nav-item @yield('active_status_about')">
-                                    <a class="rd-nav-link" href="{{ route('front.about.index') }}">About Us</a>
+                                    <a class="rd-nav-link" href="{{ route('front.about.index') }}">About</a>
+                                </li>
+                                <li class="rd-nav-item @yield('active_status_plan')">
+                                    <a class="rd-nav-link" href="{{ route('front.plan.index') }}">Plan</a>
+                                </li>
+                                <li class="rd-nav-item @yield('active_status_article')">
+                                    <a class="rd-nav-link" href="{{ route('front.article.index') }}">Article</a>
                                 </li>
                                 <li class="rd-nav-item @yield('active_status_contact')">
-                                    <a class="rd-nav-link" href="{{ route('front.contact.index') }}">Contact Us</a>
+                                    <a class="rd-nav-link" href="{{ route('front.contact.index') }}">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -64,7 +67,12 @@
                     <div class="inset-xxl">
                         <h6>About us</h6>
                         <p class="text-spacing-sm" style="text-align: justify; padding-right: 30px">
-                            {{ $global_about->details ?? 'About Here' }}
+                            @if(strlen($global_about['details']) > 280)
+                                {{ substr($global_about['details'], 0, 280) }}
+                                <a class="" href="{{ route('front.about.index') }}">Read More</a>
+                            @else
+                                {{ $global_about['details'] ?? 'About Here' }}
+                            @endif
                         </p>
                     </div>
                 </div>

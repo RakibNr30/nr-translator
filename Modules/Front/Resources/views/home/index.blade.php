@@ -1,6 +1,8 @@
 @extends('front.layouts.master')
 
-@section('title', 'Home')
+@section('title')
+    {{ $global_site->name ?? 'Site Title' }}
+@stop
 @section('active_status_home', 'active')
 
 @section('breadcrumb')

@@ -26,17 +26,19 @@
         <div class="container container-bigger">
             <div class="row">
                 <div class="col-md-9 col-12">
-                    <h3>{{ $plan->title ?? 'Plan Title Here' }}</h3>
-                    <div class="divider divider-default"></div>
-                    <p class="heading-5 text-align-justify">
-                        {{ $plan->subtitle ?? '' }}
-                    </p>
-                    <p class="text-spacing-sm  text-align-justify">
-                        {!! $plan->details ?? 'Plan Details Here' !!}
-                    </p>
-                    @if(isset($plan->link))
-                        <a class="button button-default-outline button-nina" target="_blank" href="{{ $plan->link }}">learn more</a>
-                    @endif
+                    <div class="our-plan">
+                        <h3>{{ $plan->title ?? 'Plan Title Here' }}</h3>
+                        <div class="divider divider-default"></div>
+                        <p class="heading-5 text-align-justify">
+                            {{ $plan->subtitle ?? '' }}
+                        </p>
+                        <p class="text-spacing-sm  text-align-justify">
+                            {!! $plan->details ?? 'Plan Details Here' !!}
+                        </p>
+                        @if(isset($plan->link))
+                            <a class="button button-default-outline button-nina" target="_blank" href="{{ $plan->link }}">learn more</a>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,6 +46,25 @@
 @stop
 
 @section('style')
+    <style>
+        .section .our-plan span {
+            font-size: unset !important;
+        }
+        .section .our-plan ul li {
+            font-style: unset !important;
+            list-style-type: disc !important;
+        }
+        .section .our-plan ol li {
+            font-style: unset !important;
+            list-style-type: decimal !important;
+        }
+        .section .our-plan ul, ol, dl {
+            padding-left: 30px !important;
+        }
+        .section .our-plan ul li, ol li {
+            display: list-item !important;
+        }
+    </style>
 @stop
 
 @section('script')

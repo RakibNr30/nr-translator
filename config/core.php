@@ -45,6 +45,13 @@ return [
                     "icon" => "fa-arrow-right",
                     "url" => "/admin/our-plan",
                     "permission" => "our_plan",
+                ],
+                [
+                    "name" => "Article",
+                    "id" => "article",
+                    "icon" => "fa-arrow-right",
+                    "url" => "/admin/article",
+                    "permission" => "article",
                 ]
             ]
         ],
@@ -109,24 +116,32 @@ return [
             "children" => []
         ],
         [
-            "name" => "About Us",
-            "id" => "about_us",
+            "name" => "About",
+            "id" => "about",
             "icon" => "",
             "url" => "/about-us",
             "permission" => "",
             "children" => []
         ],
         [
-            "name" => "Our Plan",
-            "id" => "our_plan",
+            "name" => "Plan",
+            "id" => "plan",
             "icon" => "",
             "url" => "/our-plan",
             "permission" => "",
             "children" => []
         ],
         [
-            "name" => "Contact Us",
-            "id" => "contact_us",
+            "name" => "Article",
+            "id" => "article",
+            "icon" => "",
+            "url" => "/articles",
+            "permission" => "",
+            "children" => []
+        ],
+        [
+            "name" => "Contact",
+            "id" => "contact",
             "icon" => "",
             "url" => "/contact-us",
             "permission" => "",
@@ -156,6 +171,9 @@ return [
         ],
         'user' => [
             'avatar' => 'user_avatar',
+        ],
+        'article' => [
+            'image' => 'article_feature_image',
         ]
     ],
     'image' => [

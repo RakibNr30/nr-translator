@@ -121,3 +121,9 @@ label:not(.form-check-label):not(.custom-file-label) {
 input[type=file] {
     height: 44px;
 }
+.card label {
+    font-weight: bold !important;
+}
+.dt-button.dropdown-item.buttons-pdf {
+    display: none !important;
+}
