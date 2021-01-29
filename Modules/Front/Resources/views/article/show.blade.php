@@ -60,6 +60,7 @@
         .article .single-article {
             background: #f0f0f0;
             padding: 20px 20px;
+            border-radius: 10px;
         }
         .article .single-article .feature-image {
             margin-top: 20px;

@@ -55,6 +55,7 @@
             background: #f0f0f0;
             padding: 20px 20px;
             margin-top: 10px;
+            border-radius: 5px;
         }
         .article .single-article p.post-date {
             color: #1a202c;
